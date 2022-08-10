@@ -7,6 +7,8 @@ const {
   deleteGoal,
 } = require("../controllers/goalController");
 
+const { protect } = require("../middleware/authMiddleware");
+
 // short form to set routes::
 // router.route('/').get(getGoals).post(setGoal);
 // router.route('/:id').delete(deleteGoal).put(updateGoal);
