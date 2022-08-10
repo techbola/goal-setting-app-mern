@@ -13,9 +13,9 @@ const { protect } = require("../middleware/authMiddleware");
 // router.route('/').get(getGoals).post(setGoal);
 // router.route('/:id').delete(deleteGoal).put(updateGoal);
 
-router.get("/", getGoals);
-router.post("/", setGoal);
-router.put("/:id", updateGoal);
-router.delete("/:id", deleteGoal);
+router.get("/", protect, getGoals);
+router.post("/", protect, setGoal);
+router.put("/:id", protect, updateGoal);
+router.delete("/:id", protect, deleteGoal);
 
 module.exports = router;
