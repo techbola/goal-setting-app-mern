@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://merngoalappbola.herokuapp.com", //http://localhost:5000
+  // baseURL: "https://merngoalappbola.herokuapp.com",
+  baseURL: "http://localhost:5000",
 });
 
 const API_URL = "/api/users/";
